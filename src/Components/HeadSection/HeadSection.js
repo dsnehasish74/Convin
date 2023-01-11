@@ -1,15 +1,19 @@
 import { ButtonTypes } from "../../Constants/ButtonTypes";
 import { Link } from "react-router-dom";
 import "./HeadSection.css";
-const HeadSection = ({ isBucket, busketInfo, buttonType }) => {
+const HeadSection = ({ isBucket, bucketInfo, buttonType, openModal }) => {
   return (
     <div className="headSection">
       <p>
-        <Link className="headSectionLink">Home</Link>
-        {isBucket && <Link>{"/" + busketInfo}</Link>}
+        <Link className="headSectionLink" to="/">
+          Home
+        </Link>
+        {isBucket && (
+          <span className="headSectionLink">{" / " + bucketInfo}</span>
+        )}
       </p>
-      <button className="uploadButton">
-        {buttonType == ButtonTypes.CreateBucket ? "Create" : "Upload"}
+      <button className="uploadButton" onClick={openModal}>
+        {buttonType == ButtonTypes.CreateBucket ? "Create Bucket" : "Upload"}
       </button>
     </div>
   );

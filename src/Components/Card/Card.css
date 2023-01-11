@@ -1,0 +1,32 @@
+.Card{
+    background-color: var(--secondary-color);
+    width: 80%;
+    max-width: 280px;
+    border-left: 10px solid var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    margin-right: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Card:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.CardHeader{
+    font-size: 24px;
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+.IconContainer{
+    display: flex;
+    justify-content: flex-end;
+}
+.IconButton{
+    background-color: transparent;
+    font-size: 24px;
+    margin-left: 8px;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}

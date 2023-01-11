@@ -1,0 +1,11 @@
+.modalCloseButton{
+    float: right;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modalBody{
+    margin-top: 32px;
+}

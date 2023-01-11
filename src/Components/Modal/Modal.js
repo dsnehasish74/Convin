@@ -1,6 +1,7 @@
-import { faL } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Modal from "react-modal";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import "./Modal.css";
 const customStyles = {
   content: {
     top: "50%",
@@ -13,24 +14,17 @@ const customStyles = {
   },
 };
 Modal.setAppElement("#root");
-const ModalContainer = ({ children }) => {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+const ModalContainer = ({ children, isOpenModal, closeModal }) => {
   return (
     <Modal
-      isOpen={modalIsOpen}
+      isOpen={isOpenModal}
       onRequestClose={closeModal}
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <button>Close</button>
+      <button className="modalCloseButton" onClick={closeModal}>
+        <AiOutlineCloseCircle />
+      </button>
       {/* <button onClick={closeModal}>close</button>
       <div>I am a modal</div>
       <form>
@@ -40,7 +34,7 @@ const ModalContainer = ({ children }) => {
         <button>inside</button>
         <button>the modal</button>
       </form> */}
-      {children}
+      <div className="modalBody">{children}</div>
     </Modal>
   );
 };

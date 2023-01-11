@@ -16,7 +16,7 @@
     display: flex;
     justify-content:center;
     align-items:center;
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     padding-left: 0px;
     padding-right: 0px;
@@ -40,4 +40,14 @@
     color: var(--secondary-text-color);
     font-size: 24px;
     margin-bottom:  40px;
+}
+
+.loginCard{
+    margin: 16px;
+}
+
+@media only screen and (max-width: 768px){
+    .loginSubHeader{
+        font-size: 18px;
+    }
 }

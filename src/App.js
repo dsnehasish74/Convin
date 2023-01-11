@@ -7,6 +7,9 @@ import { setUserId } from "./Redux/Actions/AuthActions";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
+import Bucket from "./Pages/Bucket/Bucket";
+import History from "./Pages/History/History";
+
 function App() {
   const dispatch = useDispatch();
   firebase.auth().onAuthStateChanged((user) => {
@@ -20,6 +23,7 @@ function App() {
     } else {
       // User is signed out
       // ...
+      dispatch(setUserId(""));
     }
   });
   return (
@@ -27,6 +31,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/:id" element={<Bucket />} />
       </Routes>
     </BrowserRouter>
   );
