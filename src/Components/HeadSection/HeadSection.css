@@ -1,0 +1,17 @@
+.headSection{
+    display:flex;
+    justify-content: space-between;
+}
+.uploadButton{
+    font-size: 24px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.headSectionLink{
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+}

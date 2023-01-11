@@ -1,0 +1,43 @@
+.loginContainer{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.googleImg{
+    width: 20px;
+    margin-right: 16px;
+}
+
+.signinGoogle{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    max-width: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid var(--primary-color);
+    height: 48px;
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color:transparent;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--primary-color);
+
+}
+
+.loginHeader {
+    color: var(--primary-text-color);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.loginSubHeader{
+    color: var(--secondary-text-color);
+    font-size: 24px;
+    margin-bottom:  40px;
+}
